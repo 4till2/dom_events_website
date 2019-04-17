@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Yosefs Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" type="text/css" href="./style.css">
+        <script async src="./javascript.js"></script>
+    </head>
+
+    <body>
+        <div class="search" id="search-bar">
+            <input type="text" onchange="search()" id="search-content" placeholder="Search ..."></input>
+        </div>
+        
+        <section class="group" id="dom-events">
+            <h1><a name="domEvents">HTML DOM Events</a></h1>
+
+            <div class="row" id="change">
+                <div class="name" id="change-event">
+                        <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/change" target="_blank">change</a></h2>
+                    </div>
+                <div class="description">
+                    <p>The event occurs when the content of a form element, the selection, or the checked state have changed (for <i>input</i>, <i>select</i>, and <i>textarea</i>)</p>
+                </div>
+                <div class="example" id=change-example>
+                    <div class="sample">
+                        <h4><u>CHANGE</u> the input field:</h4>
+                        <input onchange="displayContent(this)" id="change-input">
+                    </div>
+                    <div class="result text-result" id="change-result">
+                        You made a CHANGE!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="click">
+                <div class="name" id="click-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/click" target="_blank">click</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the user clicks on an element</p>
+                </div>
+                <div class="example" id=click-example>
+                    <div class="sample">
+                        <h4><u>CLICK</u> the button:</h4>
+                        <button onclick="displayContent(this)" id="click-btn">Click Me :)</button>
+                    </div>
+                    <div class="result text-result" id="click-result">
+                        You CLICKED!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="copy">
+                <div class="name" id="copy-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/copy" target="_blank">copy</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the user copies the content of an element</p>
+                </div>
+                <div class="example" id=copy-example>
+                    <div class="sample">
+                        <h4><u>COPY</u> the text:</h4>
+                        <h5 oncopy="displayContent(this)" id="copy-p">Highlight this text and right click to select 'copy'</h5>
+                    </div>
+                    <div class="result text-result" id="copy-result">
+                        You made a COPY!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="cut">
+                <div class="name" id="cut-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/cut" target="_blank">cut</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the user cuts the content of an element</p>
+                </div>
+                <div class="example" id=cut-example>
+                    <div class="sample">
+                        <h4><u>CUT</u> the text:</h4>
+                        <h5 oncut="displayContent(this)" id="cut-p">Highlight this text and right click to select 'cut'</h5>
+                    </div>
+                    <div class="result text-result" id="cut-result">
+                        You CUT the text!
+                    </div>
+                </div>
+            </div>          
+
+            <div class="row" id="dblclick">
+                <div class="name" id="dblclick-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/dblclick" target="_blank">dblclick</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the user double-clicks on an element</p>
+                </div>
+                <div class="example" id=dblclick-example>
+                    <div class="sample">
+                        <h4><u>DOUBLE CLICK</u> the button:</h4>
+                        <button ondblclick="displayContent(this)" id="dblclick-btn">Double Click Me :)</button>
+                    </div>
+                    <div class="result text-result" id="dblclick-result">
+                        You DOUBLE CLICKED!
+                    </div>
+                </div>
+            </div>  
+
+            <div class="row" id="drag">
+                <div class="name" id="drag-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/drag" target="_blank">drag</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when an element is being dragged</p>
+                </div>
+                <div class="example" id=drag-example>
+                    <div class="sample">
+                        <h4><u>DRAG</u> the cloud:</h4>
+                        <span draggable="true" ondrag="displayContent(this)" style='font-size:50px;' id="drag-content">&#9729;</span>
+                    </div>
+                    <div class="result text-result" id="drag-result">
+                        You DRAGGED the item!
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="row" id="focus">
+                <div class="name" id="focus-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/focus" target="_blank">focus</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when an element gets focus</p>
+                </div>
+                <div class="example" id=focus-example>
+                    <div class="sample">
+                        <h4><u>FOCUS</u> on the field:</h4>
+                        <input onfocus="displayContent(this)" id="focus-content">
+                    </div>
+                    <div class="result text-result" id="focus-result">
+                        You FOCUSED on the item!
+                    </div>
+                </div>
+            </div> 
+             
+            <div class="row" id="keydown">
+                <div class="name" id="keydown-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/keydown" target="_blank">keydown</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the user is pressing a key</p>
+                </div>
+                <div class="example" id=keydown-example>
+                    <div class="sample">
+                        <h4><u>KEYDOWN</u> in the field:</h4>
+                        <input onkeydown="displayContent(this)" id="keydown-content">
+                    </div>
+                    <div class="result text-result" id="keydown-result">
+                        You KEYDOWNED!
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="row" id="keyup">
+                <div class="name" id="keyup-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/keyup" target="_blank">keyup</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the user releases a key</p>
+                </div>
+                <div class="example" id=keyup-example>
+                    <div class="sample">
+                        <h4><u>KEYUP</u> in the field:</h4>
+                        <input onkeyup="displayContent(this)" id="keyup-content">
+                    </div>
+                    <div class="result text-result" id="keyup-result">
+                        You KEYUPED!
+                    </div>
+                </div>
+            </div> 
+            <div class="row" id="mousedown">
+                <div class="name" id="mousedown-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/mousedown" target="_blank">mousedown</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the user presses a mouse button over an element</p>
+                </div>
+                <div class="example" id=mousedown-example>
+                    <div class="sample">
+                        <h4><u>MOUSEDOWN</u> in the field:</h4>
+                        <input onmousedown="displayContent(this)" id="mousedown-content">
+                    </div>
+                    <div class="result text-result" id="mousedown-result">
+                        You MOUSEDOWNED!
+                    </div>
+                </div>
+            </div> 
+            <div class="row" id="mouseenter">
+                <div class="name" id="mouseenter-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseenter" target="_blank">mouseenter</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the pointer is moved onto an element</p>
+                </div>
+                <div class="example" id=mouseenter-example>
+                    <div class="sample">
+                        <h4><u>MOUSEENTER</u> in the field:</h4>
+                        <input onmouseenter="displayContent(this)" id="mouseenter-content">
+                    </div>
+                    <div class="result text-result" id="mouseenter-result">
+                        MOUSEENTER!
+                    </div>
+                </div>
+            </div> 
+            <div class="row" id="mouseleave">
+                <div class="name" id="mouseleave-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/mouseleave" target="_blank">mouseleave</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the pointer is moved out of an element</p>
+                </div>
+                <div class="example" id=mouseleave-example>
+                    <div class="sample">
+                        <h4><u>MOUSELEAVE</u> in the field:</h4>
+                        <input onmouseleave="displayContent(this)" id="mouseleave-content">
+                    </div>
+                    <div class="result text-result" id="mouseleave-result">MOUSELEAVE!</div>
+                </div>
+            </div> 
+            <div class="row" id="mousemove">
+                <div class="name" id="mousemove-event">
+                    <h2><a href="https://developer.mozilla.org/en-US/docs/Web/Events/mousemove" target="_blank">mousemove</a></h2>
+                </div>
+                <div class="description">
+                    <p>The event occurs when the pointer is moving while it is over an element	/p>
+                </div>
+                <div class="example" id=mousemove-example>
+                    <div class="sample">
+                        <h4><u>MOUSEMOVE</u> in the field:</h4>
+                        <input onmousemove="displayContent(this)" id="mousemove-content">
+                    </div>
+                    <div class="result text-result" id="mousemove-result">MOUSEMOVE!</div>
+                </div>
+            </div> 
+
+        </section>
+            
+    </body>
+
+</html>
